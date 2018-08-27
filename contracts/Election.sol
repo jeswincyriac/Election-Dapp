@@ -2,9 +2,21 @@ pragma solidity ^0.4.24;
 
 contract Election{                   //like a class
 
-    string public candidate;         //declaring state variable
+    struct Candidate {
+        uint id;
+        string name;
+        uint voteCount;
+    }
+             //declaring state variable
+    mapping(uint => Candidate) public candidates;
+    uint public candidatesCount;
     function Election ()  public{
-        candidate = "Candidate 1";
+        addCandidate("Candidate1");
+        addCandidate("Candidate2");
+    }
+    function addCandidate (string _name) private{
+        candidatesCount ++;
+        candidates[candidatesCount] = Candidate(candidatesCount,_name,0);
     }
 
 }
