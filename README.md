@@ -29,3 +29,9 @@ This copies the code to your local machine.
 
 
 <img src="Peek voting app final.gif"  />
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+
