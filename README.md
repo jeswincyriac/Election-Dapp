@@ -12,12 +12,20 @@ This copies the code to your local machine.
  * [ganache ](https://truffleframework.com/ganache) :- Local blockchain for development puposes.
  * [metamask](https://metamask.io/) :- Connects your blockchain to browser. 
  
-### Installing and Deploying
+### Installing 
 
  * `cd` into the Election-Dapp directory and run `npm install`
+ 
+ ## Deploying
+ 
  * Fire up ganache blockchain by going to the downloaded folder and running `./filename.Appimage`
  * `truffle migrate --reset ` :-Deploys the smartcontract to block chain.
  * `npm run dev` :- Starts the server for frontend.
  * Open browser and go to `localhost:3000` and make an account in metamask.
  * select custom RPC  Network and enter the url shown in ganache.Reload the page.
  * Import the other accounts to metamask from ganache using private key.
+
+## Final output
+
+
+<img src="Peek voting app final.gif"  />
