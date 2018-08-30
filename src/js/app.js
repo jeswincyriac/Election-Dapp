@@ -30,7 +30,7 @@ App = {
       App.contracts.Election = TruffleContract(election);
       // Connect provider to interact with contract
       App.contracts.Election.setProvider(App.web3Provider);
-      App.listenForEvents();
+      //App.listenForEvents();
       return App.render();
     });
   },
@@ -40,13 +40,13 @@ App = {
       // This is a known issue with Metamask
       // https://github.com/MetaMask/metamask-extension/issues/2393
       instance.votedEvent({}, {
-        //fromBlock: 0,
-        //toBlock: 'latest'
-        fromBlock:'93'
+        fromBlock: 0,
+        toBlock: 'latest'
+
       }).watch(function(error, event) {
         console.log("event triggered", event)
         // Reload when a new vote is recorded
-        App.render();
+        //location.reload();
       });
     });
   },
@@ -116,6 +116,7 @@ App = {
       // Wait for votes to update
       $("#content").hide();
       $("#loader").show();
+      location.reload();
     }).catch(function(err) {
       console.error(err);
     });
