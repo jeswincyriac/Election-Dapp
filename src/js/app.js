@@ -116,9 +116,9 @@ App = {
       // Wait for votes to update
       $("#content").hide();
       $("#loader").show();
-      location.reload();
+     setTimeout(function(){ location.reload(); }, 5000); 
     }).catch(function(err) {
-      console.error(err);
+      console.error(err)
     });
   }
 };
