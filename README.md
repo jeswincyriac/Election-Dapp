@@ -27,8 +27,8 @@ This copies the code to your local machine.
 
 ## Final output
 
-
 <img src="Peek voting app final.gif"  />
+       In this gif the user votes for candidate2 and the votecount increases from 4 to 5. 
 
 ## License
 
